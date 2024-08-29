@@ -7,12 +7,9 @@ import axios from "axios";
 const Login = () => {
   const navigate = useNavigate();
   const [currentImage, setCurrentImage] = useState(0);
-  const [step, setStep] = useState(1);
-  const [accountCreated, setaccountCreated] = useState(false);
-
   const [formData, setFormData] = useState({
-    email:"",
-    password:""
+    email: "",
+    password: "",
   });
 
   const images = [
@@ -77,41 +74,28 @@ const Login = () => {
     }
   };
 
-  const handleNextStep = () => {
-    setStep(step + 1);
-  };
-
-  const handlePreviousStep = () => {
-    setStep(step - 1);
-  };
-
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
-        const filteredData = Object.fromEntries(
-            Object.entries(formData).filter(([value]) => value !== "")
-        );
+      const response = await axios.post(
+        "http://localhost:1218/loginBuyer",
+        formData
+      );
 
-        const response = await axios.post("http://localhost:1218/addBuyer", filteredData);
-
-        if (response.data.missingKeys) {
-            alert(`Please fill in the following required fields: ${response.data.missingKeys.join(", ")}`);
-        } else {
-            console.log("Account created successfully:", response.data);
-            setaccountCreated(true);
-            navigate("/");
-            if (window.location.pathname === "/") {
-                window.location.reload();
-            }
+      if (response.data.mssg === "The Credentials are Wrong") {
+        alert("The Credentials are Wrong");
+      } else {
+        console.log("Login successful:", response.data.check);
+        navigate("/");
+        if (window.location.pathname === "/") {
+          window.location.reload();
         }
+      }
     } catch (error) {
-        console.error("Error creating account:", error);
-        if (error.response && error.response.data.missingKeys) {
-            alert(`Please fill in the following required fields: ${error.response.data.missingKeys.join(", ")}`);
-        } else {
-            alert("There was an error creating your account. Please try again.");
-        }
+      console.error("Error during login:", error);
+      alert("An error occurred during login. Please try again.");
     }
-};
+  };
 
   return (
     <div className="w-full h-screen bg-[#252525] flex items-center justify-center">
@@ -142,7 +126,8 @@ const Login = () => {
                 currentImage === index ? "opacity-100" : "opacity-0"
               }`}
               style={{
-                transition: "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
+                transition:
+                  "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
               }}
             />
           ))}
@@ -159,35 +144,35 @@ const Login = () => {
           </div>
         </div>
         <div className="w-full h-full flex flex-col justify-between font-montserrat gap-2 p-5">
-          
-            <div className="flex flex-col gap-5 justify-between">
-              <h1 className="text-[60px]">LogIn <br/> to Your Account</h1>
-              <div className="w-full h-full flex flex-col gap-4 justify-between">
-                <input
-                  className="border-black border-solid border-[2px] p-5 rounded-2xl w-full"
-                  type="text"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-                <input
-                  className="border-black border-solid border-[2px] p-5 rounded-2xl w-full"
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <button
-                onClick={handleNextStep}
-                className="rounded-full border-black border-solid border-[2px] p-5 px-10 hover:bg-black hover:text-white transition-all"
-              >
-                LogIn
-              </button>
+          <div className="flex flex-col gap-5 justify-between">
+            <h1 className="text-[60px]">
+              LogIn <br /> to Your Account
+            </h1>
+            <div className="w-full h-full flex flex-col gap-4 justify-between">
+              <input
+                className="border-black border-solid border-[2px] p-5 rounded-2xl w-full"
+                type="text"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+              <input
+                className="border-black border-solid border-[2px] p-5 rounded-2xl w-full"
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleInputChange}
+              />
             </div>
-          
+            <button
+              onClick={handleSubmit}
+              className="rounded-full border-black border-solid border-[2px] p-5 px-10 hover:bg-black hover:text-white transition-all"
+            >
+              LogIn
+            </button>
+          </div>
         </div>
       </div>
     </div>
