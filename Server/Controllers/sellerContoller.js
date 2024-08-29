@@ -1,13 +1,12 @@
-const buyer = require("../Models/Buyer").Buyer;
-const buyerSchema = require("../Models/Buyer").buyerSchema;
 const checkMissingKeys = require("../Utils/requiredKeysInDB");
-const sendMail = require("../Helpers/mailService");
+const sellerSchema = require("../Models/Seller").sellerSchema;
+const seller = require("../Models/Seller")
 
-const addBuyer = async function(req, res) {
+const addSeller = async function(req, res) {
     try {
         const inputData = req.body;
         console.log(inputData);
-        const missingKeys = checkMissingKeys(inputData,buyerSchema);
+        const missingKeys = checkMissingKeys(inputData,sellerSchema);
         console.log("Missing Keys Checked");
 
         if (missingKeys.length > 0) {
@@ -18,8 +17,8 @@ const addBuyer = async function(req, res) {
         } else {
             console.log("Hello2");
 
-            const checkEmail = await buyer.findOne({ email: inputData.email });
-            const checkMobileNumber = await buyer.findOne({ mobile_number: inputData.mobile_number });
+            const checkEmail = await seller.findOne({ email: inputData.email });
+            const checkMobileNumber = await seller.findOne({ mobile_number: inputData.mobile_number });
 
             if (checkEmail !== null) {
                 return res.status(409).json({
@@ -36,7 +35,7 @@ const addBuyer = async function(req, res) {
             } else {
                 console.log("hello");
                 await sendMail.SendInvoiceMail(inputData.email);
-                await buyer.create(inputData);
+                await seller.create(inputData);
 
                 return res.json({
                     msg: "User created successfully!"
@@ -51,6 +50,4 @@ const addBuyer = async function(req, res) {
     }
 };
 
-
-
-module.exports = { addBuyer};
+module.exports={addSeller};

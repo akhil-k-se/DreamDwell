@@ -1,9 +1,6 @@
 // Utils/checkMissingKeys.js
 
-const schema = require('../Models/Buyer').buyerSchema;
-console.log("Hello00")
-
-function checkMissingKeys(inputData) {
+function checkMissingKeys(inputData,schema) {
     const requiredKeys = [];
     for (const key in schema.obj) {
         if (schema.obj[key].required) {
