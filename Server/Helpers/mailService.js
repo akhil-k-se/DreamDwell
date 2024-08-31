@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const crd = require("../Config/credentials");
 
-exports.SendInvoiceMail = async (email, attachmentUrl, message) => {
+exports.SendInvoiceMail = async (email, message) => {
     const mail = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 587,
@@ -15,12 +15,11 @@ exports.SendInvoiceMail = async (email, attachmentUrl, message) => {
     try {
         await mail.sendMail({
             from: crd.user1,
-            to: "hotlineclasher123@gmail.com",
-            subject: " Tera Accoutn Bn Gya BSDK",
+            to: email,
+            subject: "Tera Account bn Gya",
             html: message,
             attachments: [{
                 filename: 'Receipt.pdf',
-                path: attachmentUrl,
                 contentType: 'application/pdf'
             }]
         });

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import axios from "axios";
 import Login from "./Login";
@@ -10,7 +10,6 @@ const Signup = () => {
   const navigate = useNavigate();
   const [currentImage, setCurrentImage] = useState(0);
   const [step, setStep] = useState(1);
-  const [accountCreated, setaccountCreated] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -123,7 +122,7 @@ const Signup = () => {
         console.log("Account created successfully:", response.data);
 
         localStorage.setItem("isLoggedIn", "true");
-        
+
         navigate("/");
         if (window.location.pathname === "/") {
           window.location.reload();
