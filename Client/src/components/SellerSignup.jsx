@@ -70,7 +70,7 @@ const SellerSignup = () => {
   };
 
   const handleSubmit = () => {
-    navigate("/");
+    navigate("/new-post");
     if (window.location.pathname === "/") {
       window.location.reload();
     }

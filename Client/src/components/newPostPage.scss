@@ -1,0 +1,166 @@
+.newPostPage {
+  height: 100%;
+  display: flex;
+
+  .formContainer {
+    flex: 3;
+    overflow: scroll;
+
+    .wrapper {
+      margin: 30px 50px 100px 0px;
+
+      form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .item {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          
+          input {
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid gray;
+          }
+
+          select {
+            padding: 19px;
+          }
+
+          &.description {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+
+            .quill > .ql-container > .ql-editor {
+              height: 200px;
+              font-size: 16px;
+            }
+          }
+        }
+        .sendButton {
+          width: 30%;
+          padding: 13px;
+          border-radius: 5px;
+          border: none;
+          background-color: rgb(0, 0, 0);
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+.title-price-address{
+  display: flex;
+  gap: 3rem;
+}
+.post-heading{
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+  .sideContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 50%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}
+
+
+
+.newPostPage {
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+
+  .formContainer {
+    flex: 3;
+    overflow: auto;
+    padding: 30px;
+    background-color: #ffffff;
+
+    .wrapper {
+      margin: 0;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          label {
+            font-weight: bold;
+          }
+
+          input, select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+          }
+
+          &.description {
+            width: 100%;
+            height: auto;
+            .quill > .ql-container > .ql-editor {
+              height: 200px;
+              font-size: 16px;
+            }
+          }
+        }
+
+        .sendButton {
+          padding: 10px 20px;
+          border-radius: 5px;
+          border: none;
+          background-color: #000000;
+          color: #fff;
+          font-weight: bold;
+          cursor: pointer;
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+
+  .sideContainer {
+    flex: 2;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}

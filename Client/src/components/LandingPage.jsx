@@ -16,6 +16,7 @@ const LandingPage = () => {
   navigate("/Choice")
  }
 
+ const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -128,7 +129,19 @@ const LandingPage = () => {
         ease: "power3.in",
       });
     }
+
+    const loggedIn = localStorage.getItem("isLoggedIn");
+    setIsAuthenticated(loggedIn === "true");
+
+
   }, [isMenuOpen]);
+
+  const  handleLogout =  () => {
+     window.location.reload();
+    localStorage.removeItem("isLoggedIn");
+    setIsAuthenticated(false);
+
+  };
 
   const handleMenuClick = (target) => {
     gsap.to(".menu-container", {
@@ -204,9 +217,19 @@ const LandingPage = () => {
           <h6 className="z-10 w-[250px] text-[19px] font-montserrat">
             From ₹1,50,000 to yield of 10% per annum
           </h6>
-          <button onClick={handleStartedClick} className="icon z-10 flex rounded-xl w-[100px] text-[15px] bg-white text-[#252525] items-center justify-center">
+          <nav>
+        {isAuthenticated ? (
+          <button onClick={handleLogout} className="icon z-10 flex rounded-xl w-[120px] p-5 text-[15px] bg-white text-[#252525] items-center justify-center">
+           Logout
+          </button>
+          
+        ) : (
+          <button onClick={handleStartedClick} className="icon z-10 flex rounded-xl w-[120px] text-[15px] p-5 bg-white text-[#252525] items-center justify-center">
             Get Started
           </button>
+        )}
+      </nav>
+          
         </div>
         <div className="z-10 catalog absolute rounded-xl p-8 bottom-0 gap-4 right-0 bg-white mx-20 my-20 flex ">
           <h5 className="text-[20px] w-24 font-montserrat">

@@ -19,7 +19,7 @@ const addBuyer = async function(req, res) {
             console.log("Hello2");
 
             const checkEmail = await buyer.findOne({ email: inputData.email });
-            const checkMobileNumber = await buyer.findOne({ mobile_number: inputData.mobile_number });
+            const checkMobileNumber = await buyer.findOne({ phoneNumber: inputData.phoneNumber });
 
             if (checkEmail !== null) {
                 return res.status(409).json({
@@ -51,6 +51,32 @@ const addBuyer = async function(req, res) {
     }
 };
 
+const loginBuyer = async function(req,res){
+    try{
+        const inputData = req.body;
+        console.log(inputData);
+        const check = await buyer.findOne({email:inputData.email,password:inputData.password});
+        console.log(check);
+        if(check==null){
+            console.log("checked");
+            return res.json({
+                mssg:"The Credentials are Wrong"
+            });
+        }
+        else{
+            return res.json({
+                check
+            })
+        }
 
 
-module.exports = { addBuyer};
+    }
+    catch (err) {
+        console.log(err);
+        return res.status(400).json({
+            msg: "error: 403"
+        });
+    }
+}
+
+module.exports = { addBuyer,loginBuyer};

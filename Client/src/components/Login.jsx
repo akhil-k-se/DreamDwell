@@ -81,11 +81,13 @@ const Login = () => {
         "http://localhost:1218/loginBuyer",
         formData
       );
+      console.log(response.data.mssg);
 
-      if (response.data.mssg === "The Credentials are Wrong") {
+      if (response.data.mssg == "The Credentials are Wrong") {
         alert("The Credentials are Wrong");
       } else {
         console.log("Login successful:", response.data.check);
+        localStorage.setItem("isLoggedIn", "true")
         navigate("/");
         if (window.location.pathname === "/") {
           window.location.reload();

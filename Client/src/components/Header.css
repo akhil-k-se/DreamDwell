@@ -1,0 +1,154 @@
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-search {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.icon {
+    width: 50px;
+    margin-right: 25px;
+}
+
+.location-search input {
+    width: 250px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+    width: 150px;
+}
+
+.nav-list a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    width: 150px;
+}
+
+.nav-list a:hover {
+    color: #007bff;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile span {
+    width: 100px;
+}
+
+.profile .icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .location-search input {
+        width: 200px; /* Reduce input width for smaller screens */
+    }
+
+    .nav-list li {
+        margin: 0 10px; /* Reduce spacing between nav items */
+        width: auto; /* Allow nav items to adjust their width */
+    }
+
+    .nav-list a {
+        width: auto; /* Let links adjust to content */
+        padding: 5px 8px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        justify-content: space-between;
+    }
+
+    .location-search {
+        margin-right: 0;
+        margin-bottom: 10px; /* Add some margin for spacing */
+        width: 100%; /* Make the search bar full width */
+        justify-content: center;
+    }
+
+    .location-search input {
+        width: 90%; /* Adjust width to fit the screen */
+    }
+
+    nav {
+        justify-content: center;
+        width: 100%; /* Make the navigation full width */
+        margin-bottom: 10px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap; /* Wrap navigation items */
+        justify-content: center;
+    }
+
+    .nav-list li {
+        margin: 5px 10px; /* Adjust spacing */
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-search input {
+        width: 80%; /* Further adjust input width for mobile screens */
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 5px 0; /* Adjust margin for vertical stack */
+        width: auto;
+    }
+
+    .profile {
+        justify-content: center;
+        width: 100%; /* Make profile section full width */
+        margin-top: 10px;
+    }
+}

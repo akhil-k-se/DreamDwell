@@ -121,7 +121,9 @@ const Signup = () => {
         );
       } else {
         console.log("Account created successfully:", response.data);
-        setaccountCreated(true);
+
+        localStorage.setItem("isLoggedIn", "true");
+        
         navigate("/");
         if (window.location.pathname === "/") {
           window.location.reload();

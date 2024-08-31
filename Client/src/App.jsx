@@ -16,6 +16,9 @@ import ChoicePage from "./components/ChoicePage";
 import StartJourney from "./components/StartJourney";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
+import NewPostPage from "./components/newPostPage";
+import Property from "./components/Property";
+import PropertyListing from "./components/PropertyListing";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,8 +120,12 @@ function App() {
         />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/SellerSignup" element={<SellerSignup />} />
+        <Route path="/new-post" element={<NewPostPage />} />
         <Route path="/Choice" element={<ChoicePage />} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/properties" element={<Property/>}/>
+        <Route path="/propertydesc" element={<PropertyListing/>}/>
+
       </Routes>
     </Router>
   );

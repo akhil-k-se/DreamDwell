@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-scroll";
 import Marquee from "./Marquee";
 import { IoMdArrowDown } from "react-icons/io";
+import { Navigate, useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,6 +63,10 @@ const Solution = () => {
     );
 
   }, []);
+const navigate= useNavigate();
+  function handleClick(){
+    navigate('/propertydesc');
+  }
 
   return (
     <div id="solution" className="solution-div flex flex-col w-full min-h-screen overflow-hidden">
@@ -72,9 +77,7 @@ const Solution = () => {
           </p>
           <div className="flex w-[200px] p-4 rounded-xl hover:text-black hover:bg-white transition-all duration-200 gap-3 text-white font-montserrat mx-8 items-center">
             <GoDotFill />
-            <Link to="explore" smooth={true} duration={500} offset={0}>
-              <button>Explore More</button>
-            </Link>
+              <button onClick={handleClick}>Explore More</button>
             <FaArrowRightLong />
           </div>
         </div>

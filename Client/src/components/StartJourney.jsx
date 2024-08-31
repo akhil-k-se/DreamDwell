@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,6 +42,11 @@ const StartJourney = () => {
 
 
   }, []);
+  const navigate = useNavigate();
+
+  const handleStartedClick = ()=>{
+    navigate("/Choice")
+   }
 
   return (
     <div className="w-full h-screen overflow-hidden start relative">
@@ -49,7 +55,7 @@ const StartJourney = () => {
           <h1 className="heading-h1 text-white font-montserrat text-[90px] z-10">
             Build Your Future<br/> With Us
           </h1>
-          <button className="action-button text-white px-10 opacity-0 py-5 bg-gray-700 font-montserrat mt-12 rounded-xl">
+          <button onClick={handleStartedClick} className="action-button text-white px-10 opacity-0 py-5 bg-gray-700 font-montserrat mt-12 rounded-xl">
             Get Started
           </button>
         </div>
