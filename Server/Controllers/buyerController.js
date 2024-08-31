@@ -35,7 +35,7 @@ const addBuyer = async function(req, res) {
                 });
             } else {
                 console.log("hello");
-                await sendMail.SendInvoiceMail(inputData.email,"YOur Account Created");
+                // await sendMail.SendInvoiceMail(inputData.email,"YOur Account Created");
                 await buyer.create(inputData);
 
                 return res.json({

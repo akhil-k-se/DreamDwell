@@ -16,12 +16,7 @@ exports.SendInvoiceMail = async (email, message) => {
         await mail.sendMail({
             from: crd.user1,
             to: email,
-            subject: "Tera Account bn Gya",
-            html: message,
-            attachments: [{
-                filename: 'Receipt.pdf',
-                contentType: 'application/pdf'
-            }]
+            subject: message,
         });
         console.log(`Invoice Mail sent to ${email}`);
         return true;
