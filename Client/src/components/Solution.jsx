@@ -63,8 +63,8 @@ const Solution = () => {
     );
 
   }, []);
-const navigate= useNavigate();
-  function handleClick(){
+  const navigate = useNavigate();
+  function handleClick() {
     navigate('/propertydesc');
   }
 
@@ -73,11 +73,11 @@ const navigate= useNavigate();
       <div className="flex">
         <div className="w-full">
           <p className="text-white m-8 w-[550px] text-[50px] font-montserrat">
-            Tailored Solutions for Your Real Estate Needs
+            Tailored Solutions for Your Needs
           </p>
           <div className="flex w-[200px] p-4 rounded-xl hover:text-black hover:bg-white transition-all duration-200 gap-3 text-white font-montserrat mx-8 items-center">
             <GoDotFill />
-              <button onClick={handleClick}>Explore More</button>
+            <button onClick={handleClick}>Explore More</button>
             <FaArrowRightLong />
           </div>
         </div>
@@ -92,7 +92,7 @@ const navigate= useNavigate();
             </div>
             <div className="flex-1">
               <h1 className="text-black font-montserrat text-[30px] text-center">
-                Market Analysis
+                Mess Services
               </h1>
             </div>
             <div className="flex mx-6">
@@ -109,7 +109,7 @@ const navigate= useNavigate();
             </div>
             <div className="flex-1">
               <h1 className="text-black font-montserrat text-[30px] text-center">
-                Market Analysis<sup className="mx-2">04</sup>
+                Laudary Included
               </h1>
             </div>
             <div className="flex mx-6">
@@ -126,7 +126,7 @@ const navigate= useNavigate();
             </div>
             <div className="flex-1">
               <h1 className="text-black font-montserrat text-[30px] text-center">
-                Market Analysis<sup className="mx-2">04</sup>
+                High class security
               </h1>
             </div>
             <div className="flex mx-6">
@@ -143,7 +143,7 @@ const navigate= useNavigate();
             </div>
             <div className="flex-1">
               <h1 className="text-black font-montserrat text-[30px] text-center">
-                Market Analysis<sup className="mx-2">04</sup>
+                Digital gatepasses
               </h1>
             </div>
             <div className="flex mx-6">

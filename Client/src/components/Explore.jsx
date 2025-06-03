@@ -9,39 +9,39 @@ const Explore = () => {
   const [selected, setSelected] = useState(0);
 
   const apartmentImages = [
-    { id: 1, src: "https://images.pexels.com/photos/14002093/pexels-photo-14002093.jpeg?auto=compress&cs=tinysrgb&w=800", title: "Azure Heights Luxury Residence" },
-    { id: 2, src: "https://images.pexels.com/photos/27023868/pexels-photo-27023868/free-photo-of-a-living-room-with-red-chairs-and-a-plant.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Serenity Gardens Apartments" },
-    { id: 3, src: "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Harmony Tower Suites" },
-    { id: 4, src: "https://images.pexels.com/photos/6480209/pexels-photo-6480209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Sunset View Residences" },
-    { id: 5, src: "https://images.pexels.com/photos/827528/pexels-photo-827528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Urban Oasis Lofts" },
-    { id: 6, src: "https://images.pexels.com/photos/5570224/pexels-photo-5570224.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Vista Grande Estates" },
-    { id: 7, src: "https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Eclipse Ridge Apartments" },
-    { id: 8, src: "https://images.pexels.com/photos/534172/pexels-photo-534172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Celestial Heights Living" },
-    { id: 9, src: "https://images.pexels.com/photos/5490389/pexels-photo-5490389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: " Starlight Haven Apartments" },
+    { id: 1, src: "/room1.jpg", title: "Hostel ABC" },
+    { id: 2, src: "/room2.jpg", title: "Hostel XYZ" },
+    { id: 3, src: "https://images.pexels.com/photos/1034584/pexels-photo-1034584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Hostel 123" },
+    { id: 4, src: "/room3.jpg", title: "Hostel ABC" },
+    { id: 5, src: "/room4.jpg", title: "Hostel XYZ" },
+    { id: 6, src: "/room5.jpg", title: "Hostel 123" },
+    { id: 7, src: "/room6.jpg", title: "Hostel ABC" },
+    { id: 8, src: "/room7.jpg", title: "Hostel XYZ" },
+    { id: 9, src: "/room8.jpg", title: "Hostel 123" },
   ];
 
   const villaImages = [
-    { id: 1, src: "https://images.pexels.com/photos/8859821/pexels-photo-8859821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Serenity Grove Villa" },
-    { id: 2, src: "https://images.pexels.com/photos/2964163/pexels-photo-2964163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Golden Sands Villa" },
-    { id: 3, src: "https://images.pexels.com/photos/903282/pexels-photo-903282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Whispering Pines Retreat" },
-    { id: 4, src: "https://images.pexels.com/photos/3205909/pexels-photo-3205909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Crystal Bay Villa" },
-    { id: 5, src: "https://images.pexels.com/photos/8085338/pexels-photo-8085338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Amberwood Estate" },
-    { id: 6, src: "https://images.pexels.com/photos/23932604/pexels-photo-23932604/free-photo-of-villas-surrounded-by-the-forest.jpeg?auto=compress&cs=tinysrgb&w=800", title: "Tranquil Oasis Villa" },
-    { id: 7, src: "https://images.pexels.com/photos/8159777/pexels-photo-8159777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Sunset Ridge Villa" },
-    { id: 8, src: "https://images.pexels.com/photos/10761018/pexels-photo-10761018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Silverleaf Manor" },
-    { id: 9, src: "https://images.pexels.com/photos/13716070/pexels-photo-13716070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Majestic Horizon Villa" },
+    { id: 1, src: "/uni1.jpg", title: "Art Block" },
+    { id: 2, src: "/uni2.jpg", title: "Business Block" },
+    { id: 3, src: "/uni4.jpg", title: "Architecture Block" },
+    { id: 4, src: "/uni3.jpg", title: "Enterance" },
+    { id: 5, src: "/uni5.jpg", title: "Library" },
+    { id: 6, src: "/uni6.jpg", title: "Gym" },
+    { id: 7, src: "/uni7.jpg", title: "Sportorium" },
+    { id: 8, src: "/uni8.jpg", title: "Auditorium" },
+    { id: 9, src: "/uni9.jpg", title: "Sports Facilities" },
   ];
 
   const forRentImages = [
-    { id: 1, src: "https://images.pexels.com/photos/5748730/pexels-photo-5748730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Harbor View Apartments" },
-    { id: 2, src: "https://images.pexels.com/photos/5490389/pexels-photo-5490389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Maplewood Residences" },
-    { id: 3, src: "https://images.pexels.com/photos/6373480/pexels-photo-6373480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Sunrise Terrace" },
-    { id: 4, src: "https://images.pexels.com/photos/6045329/pexels-photo-6045329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Lakeside Haven" },
-    { id: 5, src: "https://images.pexels.com/photos/2876787/pexels-photo-2876787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Cedar Ridge Rentals" },
-    { id: 6, src: "https://images.pexels.com/photos/3316924/pexels-photo-3316924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Willow Creek Flats" },
-    { id: 7, src: "https://images.pexels.com/photos/6492393/pexels-photo-6492393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Aspen Heights" },
-    { id: 8, src: "https://images.pexels.com/photos/6186812/pexels-photo-6186812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Pineview Estates" },
-    { id: 9, src: "https://images.pexels.com/photos/6538932/pexels-photo-6538932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", title: "Riverbend Lofts" },
+    { id: 1, src: "https://www.sharda.ac.in/attachments/infrastructure_images/mess1.png", title: "Harbor View Apartments" },
+    { id: 2, src: "https://jkkn.ac.in/wp-content/uploads/2023/07/boys-hostel-mess-300x300.png", title: "Maplewood Residences" },
+    { id: 3, src: "https://c7.alamy.com/comp/2WJ0XBG/diverse-couple-having-lunch-at-a-restaurant-their-faces-lit-up-with-joy-as-they-enjoying-tasty-food-2WJ0XBG.jpg", title: "Sunrise Terrace" },
+    { id: 4, src: "https://c7.alamy.com/comp/2EP7D4Y/rich-breakfast-assortment-with-selection-of-healthy-food-coffee-and-juice-2EP7D4Y.jpg", title: "Lakeside Haven" },
+    { id: 5, src: "https://www.vandanish.webflowindia.com/projects/5.jpg", title: "Cedar Ridge Rentals" },
+    { id: 6, src: "https://cutmap.ac.in/wp-content/uploads/mess.jpg", title: "Willow Creek Flats" },
+    { id: 7, src: "https://mealpe.app/wp-content/uploads/2024/04/MealPe-Best-Hostel-Management-Software-for-Mess-Canteen.jpg", title: "Aspen Heights" },
+    { id: 8, src: "https://www.hostel.mitindia.edu/assets/images/Mega%20Mess%20at%20MIT%20Main%20Hostel/mess-facility-5.jpg", title: "Pineview Estates" },
+    { id: 9, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqJrvDwOOPonaAYHEIFw_-pR-NMyaMFyUl7A&s", title: "Riverbend Lofts" },
   ];
 
   const getCards = () => {
@@ -143,18 +143,17 @@ const Explore = () => {
             id="explorelt"
             className="text-[70px] text-white font-montserrat my-14"
           >
-            Explore Our Properties
+            Explore Our Hostels
           </h1>
         </div>
         <div id="explorert-id" className="explorertdiv flex items-center justify-between gap-2">
-          {["Apartments", "Villas", "For Rent"].map((text, index) => (
+          {["Hostels", "Campus", "Mess"].map((text, index) => (
             <h1
               key={index}
-              className={`explorert text-[20px] rounded-lg font-tajawal p-3 cursor-pointer transition-transform transform duration-300 ${
-                selected === index
-                  ? "bg-white text-gray-800 scale-110"
-                  : "bg-gray-800 text-white hover:scale-105"
-              }`}
+              className={`explorert text-[20px] rounded-lg font-tajawal p-3 cursor-pointer transition-transform transform duration-300 ${selected === index
+                ? "bg-white text-gray-800 scale-110"
+                : "bg-gray-800 text-white hover:scale-105"
+                }`}
               onClick={() => setSelected(index)}
             >
               {text}

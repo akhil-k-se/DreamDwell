@@ -97,6 +97,8 @@ function App() {
           element={
             <div className="overflow-x-hidden">
               <LandingPage />
+
+              {/* ScrollerSection */}
               <div className="scroller-section">
                 <Scroller />
               </div>

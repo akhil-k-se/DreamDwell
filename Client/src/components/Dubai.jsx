@@ -83,35 +83,35 @@ const Dubai = () => {
       id: 1,
       title: "Safety",
       content:
-        "Dubai is renowned for its advanced and robust security infrastructure, ensuring the safety and protection of its residents and visitors.",
+        "Our hostels provide high class security for student and staff do that inmates can stay relaxed without any worry",
       icon: <IoShieldOutline />,
     },
     {
       id: 2,
-      title: "Stable Currency",
+      title: "Pocket friendly",
       content:
-        "Dubai's currency is the UAE Dirham (AED), which remains stable and widely trusted.",
+        "We provide rooms in each budget category",
       icon: <PiMoneyWavyBold />,
     },
     {
       id: 3,
-      title: "Low Mortgage Rates",
+      title: "Connectivity",
       content:
-        "Dubai offers competitive mortgage rates, making it attractive for property buyers.",
+        "Hostel are equiped with high speed internets for seamless leaernig experience.",
       icon: <MdGraphicEq />,
     },
     {
       id: 4,
       title: "Diversity",
       content:
-        "Dubai is a melting pot of diversity, with over 200 nationalities living and working in the city.",
+        "Students from all over the country stay with us.",
       icon: <IoPeopleSharp />,
     },
     {
       id: 5,
-      title: "Remote Property",
+      title: "Homeliness",
       content:
-        "Remote properties in Dubai typically refer to real estate located in less densely populated areas, often offering more privacy and tranquility compared to the city's bustling districts.",
+        "We provide a peaceful and happy environment so that students and staff feel like at home.",
       icon: <LuHome />,
     },
   ];
@@ -137,7 +137,7 @@ const Dubai = () => {
       <div className="why-dubai flex justify-between items-center">
         <div className="w-[700px]">
           <p className="font-montserrat text-[80px]">
-            Why Dubai Stands Unrivalled?
+            Why we Stand Unrivalled?
           </p>
         </div>
       </div>

@@ -37,10 +37,10 @@ const ChoicePage = () => {
             onClick={() => handleChoice('Signup')}
             className="bg-black h-[500px] relative text-white p-8 rounded-lg shadow-lg cursor-pointer transition-all transform hover:scale-105"
           >
-          <img className='absolute w-full h-full top-0 left-0 opacity-[0.05] hover:opacity-[0.5] transition-all duration-300 ' src="https://images.pexels.com/photos/16600057/pexels-photo-16600057/free-photo-of-minimal-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-            <h2 className="text-2xl font-semibold mb-4">I am a Buyer</h2>
+            <img className='absolute w-full h-full top-0 left-0 opacity-[0.05] hover:opacity-[0.5] transition-all duration-300 ' src="https://images.pexels.com/photos/16600057/pexels-photo-16600057/free-photo-of-minimal-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+            <h2 className="text-2xl font-semibold mb-4">I am a Warden</h2>
             <p className="text-lg">
-              Explore properties and find your dream home with ease.
+              Manage hostels, student data etc. via your dashboard.
             </p>
           </div>
           <div
@@ -48,11 +48,11 @@ const ChoicePage = () => {
             onClick={() => handleChoice('SellerSignup')}
             className="bg-white text-black p-8 rounded-lg shadow-lg cursor-pointer transition-all transform hover:scale-105"
           >
-          <img className='absolute w-full h-full top-0 left-0 opacity-[0.05] hover:opacity-[0.5] transition-all duration-300 ' src="https://images.pexels.com/photos/16600057/pexels-photo-16600057/free-photo-of-minimal-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+            <img className='absolute w-full h-full top-0 left-0 opacity-[0.05] hover:opacity-[0.5] transition-all duration-300 ' src="https://images.pexels.com/photos/16600057/pexels-photo-16600057/free-photo-of-minimal-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
 
-            <h2 className="text-2xl font-semibold mb-4">I am a Seller</h2>
+            <h2 className="text-2xl font-semibold mb-4">I am a Student</h2>
             <p className="text-lg">
-              List your property and reach potential buyers quickly.
+              Find your desired hotel room.
             </p>
           </div>
         </div>

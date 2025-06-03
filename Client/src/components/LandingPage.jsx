@@ -11,12 +11,12 @@ import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
 
- const navigate = useNavigate();
- const handleStartedClick = ()=>{
-  navigate("/Choice")
- }
+  const navigate = useNavigate();
+  const handleStartedClick = () => {
+    navigate("/Choice")
+  }
 
- const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -119,7 +119,7 @@ const LandingPage = () => {
       });
       tl.from(".menu-item", {
         x: "-1000%",
-        duration:0.5,
+        duration: 0.5,
         stagger: 0.3,
       });
     } else {
@@ -136,8 +136,8 @@ const LandingPage = () => {
 
   }, [isMenuOpen]);
 
-  const  handleLogout =  () => {
-     window.location.reload();
+  const handleLogout = () => {
+    window.location.reload();
     localStorage.removeItem("isLoggedIn");
     setIsAuthenticated(false);
 
@@ -175,17 +175,17 @@ const LandingPage = () => {
         </nav>
         <div className="h-full flex flex-col items-center justify-center">
           <h4 className="landingH4 text-[30px] font-montserrat">
-            Building Your dreams
+            Your campus buddy
           </h4>
           <h1 className="landingH1 text-[50px] font-bold w-[553.1px] text-center font-montserrat">
-            Real Estate in{" "}
-            <span className="font-tajawal text-[110px]">Dubai</span>:
+            Hostels at
+            <span className="font-tajawal text-[110px]">CampusMate</span>
           </h1>
           <h1 className="landingH1 text-[50px] font-bold w-[553.1px] text-center font-montserrat">
-            Ideal for Living and
+            Ideal Stay and
           </h1>
           <h1 className="landingH1 text-[50px] font-bold w-[553.1px] text-center font-montserrat">
-            Investing
+            Services
           </h1>
         </div>
         <div className="flex justify-between items-center">
@@ -199,41 +199,34 @@ const LandingPage = () => {
               </h6>
             </div>
           </div>
-          <div className="relative flex ">
-            <img
-              className="image-bottom rounded-[100px]"
-              width={100}
-              src="https://images.unsplash.com/photo-1489516408517-0c0a15662682?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
-          </div>
+
         </div>
       </div>
       <div className="rightside w-full h-screen px-18 py-2 flex items-center justify-center relative">
         <div className="absolute text-white flex top-10 justify-between gap-20 px-4">
           <h6 className="z-10 w-[230px] text-[19px] font-montserrat">
-            More Than 1500 real Estate Properties
+            More Than 1000+ rooms
           </h6>
           <h6 className="z-10 w-[250px] text-[19px] font-montserrat">
-            From ₹1,50,000 to yield of 10% per annum
+            From ₹60,000 per semester
           </h6>
           <nav>
-        {isAuthenticated ? (
-          <button onClick={handleLogout} className="icon z-10 flex rounded-xl w-[120px] p-5 text-[15px] bg-white text-[#252525] items-center justify-center">
-           Logout
-          </button>
-          
-        ) : (
-          <button onClick={handleStartedClick} className="icon z-10 flex rounded-xl w-[120px] text-[15px] p-5 bg-white text-[#252525] items-center justify-center">
-            Get Started
-          </button>
-        )}
-      </nav>
-          
+            {isAuthenticated ? (
+              <button onClick={handleLogout} className="icon z-10 flex rounded-xl w-[120px] p-5 text-[15px] bg-white text-[#252525] items-center justify-center">
+                Logout
+              </button>
+
+            ) : (
+              <button onClick={handleStartedClick} className="icon z-10 flex rounded-xl w-[120px] text-[15px] p-5 bg-white text-[#252525] items-center justify-center">
+                Get Started
+              </button>
+            )}
+          </nav>
+
         </div>
         <div className="z-10 catalog absolute rounded-xl p-8 bottom-0 gap-4 right-0 bg-white mx-20 my-20 flex ">
           <h5 className="text-[20px] w-24 font-montserrat">
-            catalog download
+            Download Brochure
           </h5>
           <div className="flex items-center">
             <IoMdDownload className="text-[30px]" />
@@ -241,7 +234,7 @@ const LandingPage = () => {
         </div>
         <img
           className="right-img w-full h-full object-cover rounded-[50px]"
-          src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/outside.jpg"
           alt=""
         />
       </div>

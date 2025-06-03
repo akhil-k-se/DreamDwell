@@ -23,7 +23,7 @@ const StartJourney = () => {
         },
       }
     );
-    
+
     gsap.fromTo(
       ".action-button",
       { opacity: 0, y: 50 },
@@ -44,16 +44,16 @@ const StartJourney = () => {
   }, []);
   const navigate = useNavigate();
 
-  const handleStartedClick = ()=>{
+  const handleStartedClick = () => {
     navigate("/Choice")
-   }
+  }
 
   return (
     <div className="w-full h-screen overflow-hidden start relative">
       <div className="video-div relative">
         <div className="absolute m-5 z-10">
           <h1 className="heading-h1 text-white font-montserrat text-[90px] z-10">
-            Build Your Future<br/> With Us
+            Imrovise your hostel stay<br /> With Us
           </h1>
           <button onClick={handleStartedClick} className="action-button text-white px-10 opacity-0 py-5 bg-gray-700 font-montserrat mt-12 rounded-xl">
             Get Started

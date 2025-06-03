@@ -7,12 +7,12 @@ const Footer = () => {
     <div className='w-full h-[80vh] flex flex-col bg-[#f7f6f1]' >
       <div className='flex h-full justify-center'>
         <div className='w-full h-full flex flex-col items-center justify-center'>
-          <img width={300} className='' src="/logo-black-nobg.png" alt="" />
-          <p className='text-[20px] font-montserrat' >Build Your Dreams With Us</p>
+          <img width={200} className='m-5' src="/nameLogo.jpg" alt="" />
+          <p className='text-[20px] font-montserrat' >Your Dream Hostels</p>
         </div>
         <div className='w-full h-full flex flex-col gap-10 items-center justify-center'>
           <div>
-          <h4 className='text-[25px] font-montserrat' >Quick Navigation</h4>
+            <h4 className='text-[25px] font-montserrat' >Quick Navigation</h4>
           </div>
           <div className='flex flex-col font-montserrat text-[35px] font-bold gap-3'>
             <h1>Home</h1>
@@ -26,12 +26,12 @@ const Footer = () => {
               <img width={100} height={100} className='rounded-full' src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" />
             </div>
             <div>
-              <h4 className='text-[15px]'>DreamDwell Founders</h4>
-              <h1 className='text-[20px] font-bold'>StackMasters</h1>
+              <h4 className='text-[15px]'>CampusMate Founders</h4>
+              <h1 className='text-[20px] font-bold'>CodeFusion</h1>
             </div>
           </div>
           <div className='text-[25px] font-semibold text-center'>
-            We are here to change your future.
+            We are here to change your hostel expeience.
           </div>
           <div className='flex gap-7'>
             <button className='w-[100px] h-[50px] border-0 rounded-xl font-montserrat text-white bg-gray-900'>Contact us</button>
